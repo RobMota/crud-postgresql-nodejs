@@ -20,10 +20,11 @@ module.exports = {
 	//update
 	async update(req, res) {
 		const { id } = req.params;
-		const { name, email } = req.body;
+		const { name, email, avatar_file_id } = req.body;
+		console.log('req.body', req.body)
 		const user = await Users.findOne({ where: { id } });
 
-		await user.update({ name, email });
+		await user.update({ name, email, avatar_file_id });
 
 		return res.json(user);
 	},
