@@ -1,5 +1,4 @@
 const { Users } = require("../models");
-console.log(Users);
 
 module.exports = {
 	//List
