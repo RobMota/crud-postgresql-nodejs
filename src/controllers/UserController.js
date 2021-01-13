@@ -11,8 +11,6 @@ module.exports = {
 	async create(req, res) {
 		const { name, email } = req.body;
 		const user = await Users.create({ name, email });
-
-		console.log(req.body);
 		return res.json(user);
 	},
 
@@ -20,7 +18,6 @@ module.exports = {
 	async update(req, res) {
 		const { id } = req.params;
 		const { name, email, avatar_file_id } = req.body;
-		console.log('req.body', req.body)
 		const user = await Users.findOne({ where: { id } });
 
 		await user.update({ name, email, avatar_file_id });
