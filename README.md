@@ -15,7 +15,7 @@ Fazer um CRUD simples de usuário com express, Sequelize e Postgres
 - Postgres
 
 
-#### Pré Requisito:
+#### Pré-requisito:
 
  Ter o postgres instalado no docker e estar funcionando.
 
